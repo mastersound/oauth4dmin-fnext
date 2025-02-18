@@ -6,14 +6,14 @@ pipeline{
             steps{
                 nodejs("NodexJS") {
                     sh 'npm install'
-                    sh 'npm build'
+                    sh 'npm run build'
                 }
             }
         }
         stage("Start"){
             steps{
                 nodejs("NodexJS") {
-                    sh 'npm start'
+                    sh 'npm run start'
                 }
                 echo "App started successfully"
             }
